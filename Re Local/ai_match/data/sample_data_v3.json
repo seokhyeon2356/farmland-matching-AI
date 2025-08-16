@@ -1,0 +1,80 @@
+
+[
+  {
+    "type": "farmland",
+    "id": 1,
+    "area": 12000, "lat": 36.76, "lng": 126.96,
+    "crops_recommended": ["양파", "감자"],
+    "facilities": {
+      "soil": "사양토", "water_source": "지하수", "agri_water": true,
+      "electricity": true, "warehouse": true, "greenhouse": false,
+      "fence": true, "paved_road": true, "car_access": true, "public_transport": false,
+      "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {
+      "trade_type": "임대", "price": 1500000, "sell_period": "3개월 이내"
+    }
+  },
+  {
+    "type": "farmland",
+    "id": 2,
+    "area": 5000, "lat": 36.77, "lng": 126.97,
+    "crops_recommended": ["딸기", "토마토"],
+    "facilities": {
+      "soil": "양토", "water_source": "하천수", "agri_water": true,
+      "electricity": true, "warehouse": false, "greenhouse": true,
+      "fence": true, "paved_road": true, "car_access": true, "public_transport": true,
+      "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {
+      "trade_type": "매매", "price": 250000000, "sell_period": "즉시 가능"
+    }
+  },
+  {
+    "type": "farmland",
+    "id": 3,
+    "area": 8000, "lat": 36.75, "lng": 126.95,
+    "crops_recommended": ["고추", "상추"],
+    "facilities": {
+      "soil": "식양토", "water_source": "관정", "agri_water": true,
+      "electricity": false, "warehouse": true, "greenhouse": true,
+      "fence": false, "paved_road": false, "car_access": false, "public_transport": false,
+      "machine_access": false, "road_adjacent": false
+    },
+    "transaction": {
+      "trade_type": "임대", "price": 800000, "sell_period": "6개월 이내"
+    }
+  },
+  {
+    "type": "applicant",
+    "id": 101,
+    "home_lat": 36.765, "home_lng": 126.965,
+    "tools": ["소형트랙터", "관리기"],
+    "interested_crops": ["양파", "감자"],
+    "preferences": {
+      "soil": ["사양토", "양토"], "water_source": ["지하수"], "agri_water": true,
+      "electricity": true, "warehouse": true, "greenhouse": false,
+      "fence": true, "paved_road": true, "car_access": true, "public_transport": false,
+      "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {
+      "trade_type": "임대", "budget": 2000000, "preferred_sell_period": "3개월 이내"
+    }
+  },
+  {
+    "type": "applicant",
+    "id": 102,
+    "home_lat": 36.771, "home_lng": 126.971,
+    "tools": ["예초기"],
+    "interested_crops": ["딸기", "토마토"],
+    "preferences": {
+      "soil": ["양토"], "water_source": ["하천수", "관정"], "agri_water": true,
+      "electricity": true, "warehouse": false, "greenhouse": true,
+      "fence": true, "paved_road": true, "car_access": true, "public_transport": true,
+      "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {
+      "trade_type": "매매", "budget": 300000000, "preferred_sell_period": "즉시 가능"
+    }
+  }
+]
