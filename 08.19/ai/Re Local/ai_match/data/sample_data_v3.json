@@ -1,0 +1,224 @@
+[
+  {
+    "id": 1,
+    "type": "farmland",
+    "name": "아산 햇살농장",
+    "lat": 36.785, 
+    "lng": 127.001,
+    "owner_age": 68,
+    "owner_address": "충청남도 아산시 배방읍",
+    "crops_recommended": ["쌀", "보리"],
+    "area": 10000,
+    "facilities": {
+      "soil": "사양토", "water_source": "지하수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "임대", "price": 5000000, "sell_period": "즉시"},
+    "reason": "고령으로 인한 은퇴", "owner_comment": "공기 좋고 물 좋은 곳입니다."
+  },
+  {
+    "id": 2,
+    "type": "farmland",
+    "name": "온양 푸른언덕",
+    "lat": 36.79,
+    "lng": 126.99,
+    "owner_age": 75,
+    "owner_address": "충청남도 아산시 온양동",
+    "crops_recommended": ["고구마", "감자"],
+    "area": 5000,
+    "facilities": {
+      "soil": "점질토", "water_source": "하천수", "agri_water": true, "electricity": false, "warehouse": false, "greenhouse": true, "fence": false, "paved_road": false, "car_access": true, "public_transport": true, "machine_access": false, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "매매", "price": 120000000, "sell_period": "3개월 이내"},
+    "reason": "자녀의 도시 이주 권유", "owner_comment": "경치가 아름다운 밭입니다."
+  },
+  {
+    "id": 3,
+    "type": "farmland",
+    "name": "아산 대박농원",
+    "lat": 36.77,
+    "lng": 127.01,
+    "owner_age": 62,
+    "owner_address": "충청남도 아산시 탕정면",
+    "crops_recommended": ["포도", "사과"],
+    "area": 20000,
+    "facilities": {
+      "soil": "양토", "water_source": "저수지", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": true, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "매매", "price": 300000000, "sell_period": "6개월 이내"},
+    "reason": "건강 문제", "owner_comment": "과수원으로 최적의 조건을 갖추고 있습니다."
+  },
+  {
+    "id": 4,
+    "type": "farmland",
+    "name": "음봉 채소농장",
+    "lat": 36.82,
+    "lng": 126.95,
+    "owner_age": 58,
+    "owner_address": "충청남도 아산시 음봉면",
+    "crops_recommended": ["상추", "오이", "토마토"],
+    "area": 1500,
+    "facilities": {
+      "soil": "사양토", "water_source": "지하수", "agri_water": true, "electricity": true, "warehouse": false, "greenhouse": true, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": false, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "임대", "price": 2000000, "sell_period": "즉시"},
+    "reason": "소규모 운영", "owner_comment": "유기농 채소 재배에 좋습니다."
+  },
+  {
+    "id": 5,
+    "type": "farmland",
+    "name": "둔포리 논",
+    "lat": 36.88,
+    "lng": 126.93,
+    "owner_age": 69,
+    "owner_address": "충청남도 아산시 둔포면",
+    "crops_recommended": ["쌀"],
+    "area": 25000,
+    "facilities": {
+      "soil": "점질토", "water_source": "저수지", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": false, "paved_road": true, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "매매", "price": 450000000, "sell_period": "협의 후 결정"},
+    "reason": "은퇴", "owner_comment": "대규모 벼농사에 최적화된 논입니다."
+  },
+  {
+    "id": 6,
+    "type": "farmland",
+    "name": "영인면 사과밭",
+    "lat": 36.85,
+    "lng": 126.88,
+    "owner_age": 65,
+    "owner_address": "충청남도 아산시 영인면",
+    "crops_recommended": ["사과", "배"],
+    "area": 8000,
+    "facilities": {
+      "soil": "양토", "water_source": "하천수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": false
+    },
+    "transaction": {"trade_type": "임대", "price": 10000000, "sell_period": "6개월 이내"},
+    "reason": "일손 부족", "owner_comment": "아산 사과는 맛이 일품입니다."
+  },
+  {
+    "id": 7,
+    "type": "farmland",
+    "name": "도고면 인삼밭",
+    "lat": 36.75,
+    "lng": 126.86,
+    "owner_age": 72,
+    "owner_address": "충청남도 아산시 도고면",
+    "crops_recommended": ["인삼"],
+    "area": 4000,
+    "facilities": {
+      "soil": "사양토", "water_source": "지하수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": true, "fence": true, "paved_road": false, "car_access": false, "public_transport": false, "machine_access": false, "road_adjacent": false
+    },
+    "transaction": {"trade_type": "매매", "price": 180000000, "sell_period": "3개월 이내"},
+    "reason": "건강상 문제", "owner_comment": "정성껏 키운 인삼밭입니다."
+  },
+  {
+    "id": 8,
+    "type": "farmland",
+    "name": "선장면 감자밭",
+    "lat": 36.73,
+    "lng": 126.83,
+    "owner_age": 66,
+    "owner_address": "충청남도 아산시 선장면",
+    "crops_recommended": ["감자", "옥수수", "배추"],
+    "area": 6000,
+    "facilities": {
+      "soil": "양토", "water_source": "하천수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": true, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "임대", "price": 4000000, "sell_period": "즉시"},
+    "reason": "다른 사업 시작", "owner_comment": "하지 감자 재배지."
+  },
+  {
+    "id": 9,
+    "type": "farmland",
+    "name": "신창면 주말농장",
+    "lat": 36.78,
+    "lng": 126.93,
+    "owner_age": 55,
+    "owner_address": "충청남도 아산시 신창면",
+    "crops_recommended": ["블루베리", "채소"],
+    "area": 1000,
+    "facilities": {
+      "soil": "마사토", "water_source": "상수도", "agri_water": true, "electricity": true, "warehouse": false, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": false, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "매매", "price": 80000000, "sell_period": "즉시"},
+    "reason": "해외 이민", "owner_comment": "수도권에서 가까운 주말농장입니다."
+  },
+  {
+    "id": 10,
+    "type": "farmland",
+    "name": "배방 스마트팜",
+    "lat": 36.77,
+    "lng": 127.03,
+    "owner_age": 45,
+    "owner_address": "충청남도 아산시 배방읍",
+    "crops_recommended": ["딸기", "파프리카"],
+    "area": 2000,
+    "facilities": {
+      "soil": "인공토", "water_source": "상수도", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": true, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "임대", "price": 15000000, "sell_period": "협의 후 결정"},
+    "reason": "스마트팜 기술 테스트", "owner_comment": "최신 설비 완비, 기술 전수 가능"
+  },
+  {
+    "id": 11, "type": "farmland", "name": "아산 제2 콩밭", "lat": 36.79, "lng": 127.02, "owner_age": 59, "owner_address": "충청남도 아산시 탕정면", "crops_recommended": ["콩", "팥"], "area": 7000, 
+    "facilities": {"soil": "양토", "water_source": "저수지", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": false, "paved_road": true, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 3500000, "sell_period": "즉시"}, "reason": "규모 축소", "owner_comment": "콩 농사에 좋은 땅입니다."
+  },
+  {
+    "id": 12, "type": "farmland", "name": "염치읍 벼농사", "lat": 36.81, "lng": 126.98, "owner_age": 71, "owner_address": "충청남도 아산시 염치읍", "crops_recommended": ["쌀"], "area": 12000, 
+    "facilities": {"soil": "사양토", "water_source": "지하수", "agri_water": true, "electricity": true, "warehouse": false, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 5500000, "sell_period": "즉시"}, "reason": "은퇴 준비", "owner_comment": "기계 농사 하기 편한 반듯한 논."
+  },
+  {
+    "id": 13, "type": "farmland", "name": "송악면 밭", "lat": 36.72, "lng": 126.9, "owner_age": 64, "owner_address": "충청남도 아산시 송악면", "crops_recommended": ["콩", "깨"], "area": 3000, 
+    "facilities": {"soil": "양토", "water_source": "하천수", "agri_water": true, "electricity": false, "warehouse": true, "greenhouse": false, "fence": false, "paved_road": false, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": false},
+    "transaction": {"trade_type": "임대", "price": 1500000, "sell_period": "즉시"}, "reason": "자금 필요", "owner_comment": "작은 밭이지만 흙이 좋습니다."
+  },
+  {
+    "id": 14, "type": "farmland", "name": "인주면 논", "lat": 36.89, "lng": 126.85, "owner_age": 67, "owner_address": "충청남도 아산시 인주면", "crops_recommended": ["쌀"], "area": 15000, 
+    "facilities": {"soil": "사양토", "water_source": "저수지", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 6000000, "sell_period": "즉시"}, "reason": "고령", "owner_comment": "대대로 물려온 땅입니다."
+  },
+  {
+    "id": 15, "type": "farmland", "name": "배방읍 채소밭", "lat": 36.78, "lng": 127.04, "owner_age": 61, "owner_address": "충청남도 아산시 배방읍", "crops_recommended": ["배추", "무", "파"], "area": 2500, 
+    "facilities": {"soil": "양토", "water_source": "지하수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": true, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 2500000, "sell_period": "즉시"}, "reason": "건강 악화", "owner_comment": "김장 채소 키우기 좋습니다."
+  },
+  {
+    "id": 16, "type": "farmland", "name": "탕정면 콩밭", "lat": 36.78, "lng": 127.02, "owner_age": 63, "owner_address": "충청남도 아산시 탕정면", "crops_recommended": ["콩"], "area": 9000, 
+    "facilities": {"soil": "사양토", "water_source": "지하수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 4800000, "sell_period": "즉시"}, "reason": "자녀와 합가", "owner_comment": "유기농 콩 재배하던 곳."
+  },
+  {
+    "id": 17, "type": "farmland", "name": "온양동 밭", "lat": 36.788, "lng": 126.995, "owner_age": 70, "owner_address": "충청남도 아산시 온양동", "crops_recommended": ["보리", "밀"], "area": 11000, 
+    "facilities": {"soil": "양토", "water_source": "하천수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 5200000, "sell_period": "즉시"}, "reason": "은퇴", "owner_comment": "보리 농사 잘되는 땅."
+  },
+  {
+    "id": 18, "type": "farmland", "name": "음봉면 밭", "lat": 36.83, "lng": 126.96, "owner_age": 66, "owner_address": "충청남도 아산시 음봉면", "crops_recommended": ["콩", "옥수수"], "area": 4500, 
+    "facilities": {"soil": "사양토", "water_source": "지하수", "agri_water": true, "electricity": true, "warehouse": false, "greenhouse": false, "fence": false, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 3000000, "sell_period": "즉시"}, "reason": "관리 어려움", "owner_comment": "마을과 가까워요."
+  },
+  {
+    "id": 19, "type": "farmland", "name": "둔포면 쌀농사", "lat": 36.87, "lng": 126.94, "owner_age": 72, "owner_address": "충청남도 아산시 둔포면", "crops_recommended": ["쌀"], "area": 18000, 
+    "facilities": {"soil": "점질토", "water_source": "저수지", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": true},
+    "transaction": {"trade_type": "임대", "price": 5800000, "sell_period": "즉시"}, "reason": "고령", "owner_comment": "평야지대라 농사 편함."
+  },
+  {
+    "id": 20, "type": "farmland", "name": "영인면 밭농사", "lat": 36.84, "lng": 126.87, "owner_age": 68, "owner_address": "충청남도 아산시 영인면", "crops_recommended": ["보리", "콩"], "area": 8500, 
+    "facilities": {"soil": "양토", "water_source": "하천수", "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": true, "paved_road": true, "car_access": true, "public_transport": true, "machine_access": true, "road_adjacent": false},
+    "transaction": {"trade_type": "임대", "price": 4500000, "sell_period": "즉시"}, "reason": "은퇴", "owner_comment": "조용한 시골 마을에 위치."
+  },
+  {
+    "id": 101,
+    "type": "applicant",
+    "home_lat": 36.78,
+    "home_lng": 127.00,
+    "tools": ["트랙터", "경운기"],
+    "interested_crops": ["쌀", "콩"],
+    "preferences": {
+      "soil": ["사양토", "양토"], "water_source": ["지하수", "저수지"], "agri_water": true, "electricity": true, "warehouse": true, "greenhouse": false, "fence": false, "paved_road": true, "car_access": true, "public_transport": false, "machine_access": true, "road_adjacent": true
+    },
+    "transaction": {"trade_type": "임대", "budget": 6000000, "sell_period": "즉시"}
+  }
+]
