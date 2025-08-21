@@ -1,0 +1,136 @@
+{
+    "farmlands": [
+        {
+            "landId": 1,
+            "landName": "아산 햇살농장",
+            "landAddress": "충청남도 아산시 배방읍",
+            "landArea": 10000,
+            "landCrop": "쌀",
+            "soiltype": "사양토",
+            "waterSource": "지하수",
+            "landWater": true,
+            "landElec": true,
+            "landMachine": true,
+            "landStorage": true,
+            "landHouse": false,
+            "landFence": true,
+            "landRoad": true,
+            "landWellRoad": true,
+            "landBus": false,
+            "landCar": true,
+            "landTrade": "임대",
+            "landPrice": 5000000,
+            "landWhen": "즉시",
+            "lat": 36.785,
+            "lng": 127.001
+        },
+        {
+            "landId": 2,
+            "landName": "온양 푸른언덕",
+            "landAddress": "충청남도 아산시 온양동",
+            "landArea": 5000,
+            "landCrop": "고구마",
+            "soiltype": "점질토",
+            "waterSource": "하천수",
+            "landWater": true,
+            "landElec": false,
+            "landMachine": false,
+            "landStorage": false,
+            "landHouse": true,
+            "landFence": false,
+            "landRoad": true,
+            "landWellRoad": false,
+            "landBus": true,
+            "landCar": true,
+            "landTrade": "매매",
+            "landPrice": 120000000,
+            "landWhen": "3개월 이내",
+            "lat": 36.79,
+            "lng": 126.99
+        }
+    ],
+    "buyers": [
+        {
+            "buyerId": 101,
+            "buyerName": "김청년",
+            "buyerAge": 30,
+            "buyerAddress": "서울특별시 강남구",
+            "home_lat": 37.4979,
+            "home_lng": 127.0276,
+            "trustProfile": {
+                "interestCrop": ["쌀", "콩"],
+                "experience": "초보",
+                "wantTrade": ["임대"],
+                "equipment": ["트랙터", "경운기"],
+                "budget": 6000000,
+                "wantPeriod": "즉시"
+            }
+        }
+    ],
+    "sellers": [
+        {
+            "sellerId": 1,
+            "sellerName": "박농부",
+            "sellerYear": 1960,
+            "sellerNumber": "010-1234-5678",
+            "sellerAddress": "충청남도 아산시 배방읍",
+            "seller_land": 1
+        },
+        {
+            "sellerId": 2,
+            "sellerName": "이농부",
+            "sellerYear": 1975,
+            "sellerNumber": "010-8765-4321",
+            "sellerAddress": "충청남도 아산시 온양동",
+            "seller_land": 1
+        }
+    ],
+    "licenses": [
+        {
+            "licenseId": 1,
+            "licenseName": "유기농업기능사",
+            "licenseFile": "s3://bucket/licenses/license1.pdf",
+            "buyerLicense": 101
+        }
+    ],
+    "matching_statuses": [
+        {
+            "matchingId": 1,
+            "matchStatus": "pending",
+            "recommendCount": 1,
+            "preferences": "빠른 시일 내에 계약 희망",
+            "farmlandMatch": 1,
+            "buyerMatch": 101
+        }
+    ],
+    "profit_informations": [
+        {
+            "profitId": 1,
+            "yearlyProfit": "500만원",
+            "yield_info": "1000kg",
+            "unitPrice": "5000원/kg",
+            "material": "100만원",
+            "labor": "200만원",
+            "machine": "50만원",
+            "netProfit": "150만원",
+            "landId": 1
+        }
+    ],
+    "recommender_informations": [
+        {
+            "suggestId": 1,
+            "suggestName": "최이장",
+            "suggestRelationship": "마을 이장",
+            "suggestNumber": "010-9999-8888",
+            "suggestEmail": "leejang@example.com",
+            "buyerSuggest": 101
+        }
+    ],
+    "favorite_farmlands": [
+        {
+            "favoriteLandId": 1,
+            "buyer_id": 101,
+            "land_id": 2
+        }
+    ]
+}
