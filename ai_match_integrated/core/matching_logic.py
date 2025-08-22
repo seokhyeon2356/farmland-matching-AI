@@ -1,6 +1,18 @@
 from math import radians, sin, cos, sqrt, atan2
 from typing import List, Dict, Any
 from app.models import Farmland, Buyer
+import re
+
+# --- 작물 정규화 헬퍼
+def _normalize_crops(text: str) -> set[str]:
+    """
+    '사과/배, 포도' 같은 문자열을 소문자/트림 후 set으로 변환.
+    구분자는 콤마/슬래시/공백을 모두 허용.
+    """
+    if not text:
+        return set()
+    items = re.split(r"[,\s/]+", str(text))
+    return {it.strip().lower() for it in items if it and it.strip()}
 
 # --- 점수 계산 헬퍼 함수 ---
 def haversine_distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -31,15 +43,26 @@ def calculate_distance_score(farmland: Farmland, buyer: Buyer, max_score: int = 
         # 5km에서 50km 사이를 선형적으로 감소
         return max_score * (1 - (distance - 5) / 45)
 
+def _normalize_crops(text: str) -> set[str]:
+    """
+    '사과/배, 포도  ' 처럼 섞인 문자열을 소문자, 공백제거해서 set으로 변환.
+    구분자는 콤마/슬래시/공백을 모두 허용.
+    """
+    if not text:
+        return set()
+    items = re.split(r"[,\s/]+", str(text))
+    return {it.strip().lower() for it in items if it and it.strip()}
+
 def calculate_crop_score(farmland: Farmland, buyer: Buyer, max_score: int = 25) -> float:
-    """작물 적합도 점수를 계산합니다."""
-    applicant_crops = set(buyer.trustProfile.interestCrop)
-    farmland_crop = set([farmland.landCrop])
-    
-    intersection = applicant_crops.intersection(farmland_crop)
-    score = (len(intersection) / len(applicant_crops)) * max_score if applicant_crops else 0
-    
-    return score
+    applicant_crops = {c.strip().lower() for c in buyer.trustProfile.interestCrop if c and str(c).strip()}
+    farm_crops = _normalize_crops(farmland.landCrop)
+
+    if not applicant_crops:
+        return 0.0
+    inter = applicant_crops & farm_crops
+    if not inter:
+        return 0.0
+    return (len(inter) / len(applicant_crops)) * max_score
 
 def calculate_facility_score(farmland: Farmland, max_score: int = 25) -> float:
     """시설 점수를 계산합니다."""
@@ -77,9 +100,6 @@ def calculate_total_match_score(
     buyer: Buyer,
     weights: Dict[str, float] = None
 ) -> Dict[str, Any]:
-    """
-    한 쌍의 농지-신청자에 대한 최종 매칭 점수를 계산합니다.
-    """
     if weights is None:
         weights = {
             'distance': 0.40,
@@ -87,20 +107,29 @@ def calculate_total_match_score(
             'facility': 0.15,
             'area': 0.15
         }
-    
+
+    # 먼저 작물 점수만 계산
+    crop_score = calculate_crop_score(farmland, buyer)
+    if crop_score <= 0:
+        return {
+            "total_score": 0.0,                      # ✅ 작물 미스매치면 전체 0
+            "details": {'distance': 0, 'crop': 0, 'facility': 0, 'area': 0},
+        }
+
+    # 나머지 점수 계산
     scores = {
         'distance': calculate_distance_score(farmland, buyer),
-        'crop': calculate_crop_score(farmland, buyer),
+        'crop': crop_score,
         'facility': calculate_facility_score(farmland),
         'area': calculate_area_score(farmland, buyer)
     }
-    
     total_score = sum(scores[key] * weights[key] for key in scores)
-    
+
     return {
         "total_score": round(total_score, 2),
         "details": scores
     }
+
 
 def find_best_matches(
     buyer: Buyer, 
@@ -109,6 +138,18 @@ def find_best_matches(
     """
     주어진 후보 농지 리스트에 대해 신청자와의 매칭 점수를 계산하고 정렬하여 반환합니다.
     """
+    # 관심 작물 집합
+    wanted = {c.strip().lower() for c in buyer.trustProfile.interestCrop if c and str(c).strip()}
+
+    # ---- 작물 필터 (원하면 유지, 아니면 이 블록 삭제) ----
+    def farm_has_wanted(f: Farmland) -> bool:
+        return bool(wanted & _normalize_crops(f.landCrop))
+
+    # 일치하는 게 있으면 그 농지만 남기고, 하나도 없으면 기존 후보 유지
+    filtered = [f for f in candidate_farmlands if farm_has_wanted(f)]
+    candidate_farmlands = filtered or candidate_farmlands
+    # -----------------------------------------------------
+
     match_results = []
     for farm in candidate_farmlands:
         scores = calculate_total_match_score(farm, buyer)
@@ -117,10 +158,11 @@ def find_best_matches(
             "farmland_name": farm.landName,
             "total_score": scores['total_score'],
             "score_details": scores['details'],
-            "farmland_info": farm.dict()
+            # pydantic v2를 쓰면 model_dump(), v1이면 dict()
+            "farmland_info": getattr(farm, "model_dump", getattr(farm, "dict"))()
         }
         match_results.append(result)
-        
+
     match_results.sort(key=lambda x: x['total_score'], reverse=True)
-    
     return match_results
+
